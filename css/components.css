@@ -1,0 +1,113 @@
+/* =============================================================
+   components.css — Íconos SVG, mascotas, globos, fondos, logos
+   ============================================================= */
+
+/* ---------- Íconos SVG ---------- */
+.svgic { width: 1.25em; height: 1.25em; vertical-align: -0.18em; }
+.card .iconbox, .layer .iconbox {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 14px;
+  background: var(--chip); color: var(--brand-bright);
+  margin-bottom: 12px;
+}
+.card .iconbox .svgic { width: 28px; height: 28px; }
+.layer .iconbox { width: 46px; height: 46px; margin: 0; }
+.layer .iconbox .svgic { width: 26px; height: 26px; }
+.card.accent .iconbox { background: rgba(232,93,12,.14); color: var(--accent); }
+.card.teal   .iconbox { background: rgba(31,175,191,.14); color: var(--teal); }
+.card.slate  .iconbox { background: rgba(93,113,128,.16); color: var(--slate-2); }
+.chip .svgic { width: 1.05em; height: 1.05em; margin-right: 4px; }
+.h3ic { color: var(--brand-bright); }
+.card.accent .h3ic { color: var(--accent); }
+
+/* ---------- Mascotas (Leo / EcoFlow) ---------- */
+.charwrap {
+  display: flex; align-items: center; gap: 16px;
+  max-width: 560px;
+}
+.charwrap.right { flex-direction: row-reverse; margin-left: auto; }
+.charfig { flex: none; width: clamp(104px, 11cqw, 168px); filter: drop-shadow(0 12px 20px var(--shadow)); }
+.charsvg, .charimg { width: 100%; height: auto; display: block; }
+.charfig { animation: floatChar 4.5s ease-in-out infinite; }
+@keyframes floatChar { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+.bubble {
+  position: relative;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 14px 18px;
+  font-size: clamp(14px, 1.35cqw, 18px);
+  line-height: 1.4; color: var(--text);
+  box-shadow: 0 12px 30px -14px var(--shadow);
+}
+.bubble .bname {
+  display: block; font-size: .72em; font-weight: 800; letter-spacing: .06em;
+  text-transform: uppercase; margin-bottom: 3px;
+}
+.charwrap.eco .bubble .bname { color: var(--brand-bright); }
+.charwrap.leo .bubble .bname { color: var(--accent); }
+.charwrap.eco .bubble { border-color: rgba(122,154,78,.4); }
+.charwrap.leo .bubble { border-color: rgba(232,93,12,.35); }
+/* cola del globo */
+.bubble::before {
+  content: ""; position: absolute; top: 50%; transform: translateY(-50%);
+  border: 11px solid transparent;
+}
+.charwrap.left  .bubble::before { left: -21px; border-right-color: var(--surface); }
+.charwrap.right .bubble::before { right: -21px; border-left-color: var(--surface); }
+
+/* ---------- Fondos de campus (portada / cierre) ---------- */
+.slide.bg { color: #fff; }
+.bgimg {
+  position: absolute; inset: 0; z-index: -2;
+  background-size: cover; background-position: center;
+}
+.bgimg::after {
+  content: ""; position: absolute; inset: 0;
+}
+.slide.bg .bgimg.gate  { background-image: url("../assets/foto_puente.webp"); }
+.slide.bg .bgimg.campus{ background-image: url("../assets/foto_puente.webp"); }
+/* velo para legibilidad (claro/oscuro) */
+.slide.bg .veil { position: absolute; inset: 0; z-index: -1; }
+[data-theme="light"] .slide.bg .veil {
+  background: linear-gradient(120deg, rgba(31,40,33,.82), rgba(63,79,89,.62));
+}
+[data-theme="dark"] .slide.bg .veil {
+  background: linear-gradient(120deg, rgba(8,12,9,.88), rgba(20,28,22,.74));
+}
+.slide.bg h1.title, .slide.bg h2.title { color: #fff; }
+.slide.bg .subtitle { color: #e7ece3; }
+
+/* ---------- Fondo global del sistema (todas las diapositivas) ---------- */
+/* Foto ambiental del sistema SMMyE detrás de cada diapositiva, con velo
+   adaptado a claro/oscuro para mantener la legibilidad del contenido. */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -10;
+  background: url("../assets/foto_puente.webp") center / cover no-repeat;
+}
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: -9;
+}
+:root[data-theme="light"] body::after {
+  background: linear-gradient(135deg, rgba(246,248,240,.90), rgba(230,236,218,.93));
+}
+:root[data-theme="dark"] body::after {
+  background: linear-gradient(135deg, rgba(16,19,17,.91), rgba(13,16,13,.94));
+}
+
+/* ---------- Logos ---------- */
+.udg-escudo { height: clamp(70px, 9cqh, 120px); width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
+.logo-corner {
+  position: fixed; top: 14px; right: 18px; height: 42px; width: auto; z-index: 30;
+  opacity: .9; filter: drop-shadow(0 3px 8px rgba(0,0,0,.25));
+}
+[data-theme="dark"] .logo-corner { filter: drop-shadow(0 3px 8px rgba(0,0,0,.6)) brightness(1.05); }
+
+body.on-bg .logo-corner { display: none; }
+
+/* Mascota flotante en una esquina (no comprime el contenido) */
+.char-float {
+  position: absolute; right: 5cqw; bottom: 11cqh; max-width: 420px; z-index: 5;
+}
+.char-float .charwrap { max-width: 420px; }

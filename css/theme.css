@@ -1,0 +1,148 @@
+/* =============================================================
+   theme.css — Tokens de diseño, modo claro/oscuro, base
+   Paleta tomada del sistema (quasar.variables.scss):
+   primary #aac27f · secondary #3f4f59 · accent #f26b1d
+   ============================================================= */
+
+:root {
+  /* Marca (constantes) */
+  --sage:        #aac27f;
+  --sage-dark:   #7d9a4e;
+  --sage-darker: #5a7233;
+  --slate:       #3f4f59;
+  --slate-2:     #5d7180;
+  --orange:      #f26b1d;
+  --teal:        #1fafbf;
+  --green:       #2d8c31;
+  --yellow:      #f2c037;
+  --red:         #dc4a3f;
+
+  /* Tipografía */
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --transition: 320ms cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- Modo claro ---------- */
+:root[data-theme="light"] {
+  --bg:        #eef2e6;
+  --bg-grad-1: #f6f8f0;
+  --bg-grad-2: #e6ecda;
+  --surface:   #ffffff;
+  --surface-2: #f6f8f0;
+  --text:      #2a323a;
+  --text-soft: #5d7180;
+  --heading:   #3f4f59;
+  --brand:     #5a7233;
+  --brand-bright: #7d9a4e;
+  --accent:    #e85d0c;
+  --border:    rgba(63, 79, 89, .14);
+  --shadow:    rgba(122, 154, 78, .22);
+  --chip:      rgba(122, 154, 78, .12);
+  --track:     rgba(63, 79, 89, .10);
+}
+
+/* ---------- Modo oscuro ---------- */
+:root[data-theme="dark"] {
+  --bg:        #101311;
+  --bg-grad-1: #161b16;
+  --bg-grad-2: #0d100d;
+  --surface:   #1b211c;
+  --surface-2: #222a23;
+  --text:      #e8eee2;
+  --text-soft: #9fb0a0;
+  --heading:   #d3e3ad;
+  --brand:     #aac27f;
+  --brand-bright: #c0d894;
+  --accent:    #f7892f;
+  --border:    rgba(170, 194, 127, .18);
+  --shadow:    rgba(0, 0, 0, .55);
+  --chip:      rgba(170, 194, 127, .12);
+  --track:     rgba(232, 238, 226, .10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 12% 8%, var(--bg-grad-1), transparent 60%),
+    radial-gradient(1000px 700px at 90% 95%, var(--bg-grad-2), transparent 55%),
+    var(--bg);
+  transition: background var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Barra de progreso ---------- */
+.progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--track); z-index: 50;
+}
+.progress span {
+  display: block; height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--sage), var(--orange));
+  transition: width var(--transition);
+}
+
+/* ---------- Controles ---------- */
+.controls {
+  position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 12px; border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 8px 28px var(--shadow);
+  border: 1px solid var(--border);
+  z-index: 40;
+  opacity: .35; transition: opacity var(--transition);
+}
+.controls:hover { opacity: 1; }
+.ctrl {
+  border: none; cursor: pointer;
+  width: 38px; height: 38px; border-radius: 50%;
+  font-size: 20px; line-height: 1;
+  color: var(--heading); background: transparent;
+  transition: background var(--transition), transform var(--transition);
+}
+.ctrl:hover { background: var(--chip); transform: translateY(-2px); }
+.ctrl:active { transform: scale(.92); }
+.counter {
+  font-variant-numeric: tabular-nums; font-weight: 600;
+  color: var(--text-soft); min-width: 56px; text-align: center; font-size: 14px;
+}
+.sep { width: 1px; height: 22px; background: var(--border); margin: 0 4px; }
+
+/* ---------- Puntos ---------- */
+.dots {
+  position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 9px; z-index: 40;
+}
+.dots button {
+  width: 9px; height: 9px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--track); padding: 0; transition: all var(--transition);
+}
+.dots button:hover { background: var(--sage-dark); }
+.dots button.active { background: var(--orange); height: 22px; border-radius: 6px; }
+
+/* ---------- Hint ---------- */
+.hint {
+  position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%);
+  font-size: 13px; color: var(--text-soft); background: var(--surface);
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+  box-shadow: 0 6px 20px var(--shadow); z-index: 40;
+  transition: opacity 600ms ease;
+}
+.hint.gone { opacity: 0; pointer-events: none; }
+
+:fullscreen .hint, :fullscreen .dots { }
+
+/* Scrollbar discreto para diapositivas con desbordamiento */
+.slide::-webkit-scrollbar { width: 8px; }
+.slide::-webkit-scrollbar-thumb { background: var(--track); border-radius: 8px; }

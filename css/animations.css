@@ -1,0 +1,70 @@
+/* =============================================================
+   animations.css — Entradas, transiciones y movimiento
+   ============================================================= */
+
+/* Transición de diapositiva */
+.slide.active { animation: slideIn 520ms cubic-bezier(.22,.61,.36,1); }
+.slide.leaving { animation: slideOut 320ms ease forwards; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(24px) scale(.99); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes slideOut {
+  to { opacity: 0; transform: translateY(-18px) scale(.99); }
+}
+
+/* Entrada escalonada de elementos: usar data-anim + --i */
+.slide.active [data-anim] {
+  opacity: 0;
+  animation: rise 600ms cubic-bezier(.22,.61,.36,1) forwards;
+  animation-delay: calc(120ms + var(--i, 0) * 95ms);
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Pop para tarjetas/estadísticas */
+.slide.active [data-anim="pop"] {
+  animation-name: pop;
+}
+@keyframes pop {
+  0%   { opacity: 0; transform: scale(.9); }
+  70%  { opacity: 1; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Zoom suave para el título de portada */
+.slide.active [data-anim="zoom"] { animation-name: zoomIn; }
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(.94); filter: blur(6px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+
+/* Flechas de flujo pulsando */
+.flowarrow { animation: bob 1.8s ease-in-out infinite; }
+@keyframes bob {
+  0%,100% { transform: translateY(0); opacity: .6; }
+  50%     { transform: translateY(3px); opacity: 1; }
+}
+
+/* Brillo del logo / icono hero */
+.hero-emoji { display: inline-block; animation: float 4s ease-in-out infinite; }
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(0); }
+  50%     { transform: translateY(-10px) rotate(-3deg); }
+}
+
+/* Anillo girando sutil (decoración) */
+.spin-slow { animation: spin 26s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Respeto a accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
