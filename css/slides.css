@@ -49,7 +49,7 @@ h2.title {
   margin-top: 14px; max-width: 60ch; line-height: 1.5;
 }
 .lead {
-  font-size: clamp(16px, 1.7cqw, 23px); line-height: 1.5;
+  font-size: clamp(20px, 2.1cqw, 30px); line-height: 1.5;
   color: var(--text); max-width: 52ch;
 }
 .lead strong { color: var(--brand-bright); }
@@ -96,7 +96,7 @@ h2.title {
 ul.ticks { list-style: none; display: grid; gap: 12px; }
 ul.ticks li {
   display: flex; gap: 12px; align-items: flex-start;
-  font-size: clamp(14px, 1.35cqw, 18px); line-height: 1.45; color: var(--text);
+  font-size: clamp(18px, 1.8cqw, 26px); line-height: 1.45; color: var(--text);
 }
 ul.ticks li::before {
   content: "▸"; color: var(--orange); font-weight: 900; flex: none;
