@@ -13,8 +13,9 @@ DECK.register({
       <li data-anim style="--i:3">Además, los datos están <b>dispersos</b> y en formatos poco aprovechables.</li>
     </ul>
 
-    <div>
-      ${character('eco', 'Un dato como <b>“420 ppm de CO₂”</b> no le dice nada a la mayoría… <b>ese es el problema que resuelvo</b>.', { side: 'left', i: 2 })}
+    <div style="display:flex;flex-direction:column;gap:14px">
+      ${character('leo', 'Oye <b>EcoFlow</b>, ¿y por qué es un problema un dato como <b>“420 ppm de CO₂”</b>?', { side: 'right', i: 2 })}
+      ${character('eco', 'Porque ese número no le dice nada a la mayoría de las personas… <b>traducirlo a algo claro es justo lo que resuelvo</b>.', { side: 'left', i: 3 })}
     </div>
   </div>
 

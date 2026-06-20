@@ -10,7 +10,7 @@ DECK.register({
       <ul class="ticks">
         <li data-anim style="--i:0"><b>PICO</b> definió <i>qué</i> buscar; <b>PRISMA</b> el <i>cómo</i> filtrar.</li>
         <li data-anim style="--i:1">Fuentes: <b>Scopus · IEEE Xplore · Web of Science</b> (mayo 2026).</li>
-        <li data-anim style="--i:2">Cadena con el término emergente <span class="hl">Model Context Protocol</span>.</li>
+        <li data-anim style="--i:2">El <b>cribado</b> se hizo por <b>título y resumen</b>; solo los elegibles se <b>leyeron a texto completo</b>.</li>
         <li data-anim style="--i:3">4 fases: identificación → cribado → elegibilidad → inclusión.</li>
       </ul>
     </div>
@@ -18,10 +18,10 @@ DECK.register({
     <div class="funnel" id="prismaFunnel">
       <div class="fbar s1" data-w="100">Identificados <span class="fn" data-count="483">0</span></div>
       <div class="fmeta" style="margin-left:6px">− 66 duplicados</div>
-      <div class="fbar s2" data-w="86">Cribados <span class="fn" data-count="417">0</span></div>
-      <div class="fmeta" style="margin-left:6px">− 36 excluidos</div>
-      <div class="fbar s3" data-w="74">Texto completo <span class="fn" data-count="381">0</span></div>
-      <div class="fmeta" style="margin-left:6px">− 360 excluidos</div>
+      <div class="fbar s2" data-w="86">Cribados · título y resumen <span class="fn" data-count="417">0</span></div>
+      <div class="fmeta" style="margin-left:6px">− 381 excluidos por título y resumen</div>
+      <div class="fbar s3" data-w="72">Leídos a texto completo <span class="fn" data-count="36">0</span></div>
+      <div class="fmeta" style="margin-left:6px">− 15 excluidos tras la lectura</div>
       <div class="fbar s4" data-w="56">Incluidos ✓ <span class="fn" data-count="21">0</span></div>
     </div>
   </div>

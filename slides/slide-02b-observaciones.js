@@ -5,8 +5,7 @@ DECK.register({
   <div class="kicker"><span class="num">★</span> Seguimiento · seminario 1.<sup>er</sup> semestre</div>
   <h2 class="title">Atención a las observaciones del seminario anterior</h2>
   <p class="subtitle" style="margin-top:8px">
-    Revisión del Dr. Miguel Ángel de la Torre Gómora · 10 dic 2025 · promedio <b>94</b>.
-    Cada observación fue atendida en el manuscrito de este semestre.
+    Cada observación recibida en el seminario anterior fue atendida en el manuscrito de este semestre.
   </p>
 
   <table class="mini obs mt" data-anim style="--i:0">

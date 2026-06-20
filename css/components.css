@@ -106,6 +106,14 @@ body::after {
 
 body.on-bg .logo-corner { display: none; }
 
+/* Pastilla clara para logos a color (p. ej. SECIHTI) sobre fondos oscuros */
+.logo-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.94); border-radius: 14px;
+  padding: 8px 18px; box-shadow: 0 8px 22px -8px rgba(0,0,0,.45);
+}
+.logo-pill img { height: clamp(42px, 5cqh, 64px); width: auto; display: block; }
+
 /* Mascota flotante en una esquina (no comprime el contenido) */
 .char-float {
   position: absolute; right: 5cqw; bottom: 11cqh; max-width: 420px; z-index: 5;

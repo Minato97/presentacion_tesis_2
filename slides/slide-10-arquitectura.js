@@ -10,7 +10,7 @@ DECK.register({
     <div class="flowarrow">▼ &nbsp; POST /api/guardarMuestras (JWT)</div>
     <div class="layer l2" data-anim style="--i:1"><span class="iconbox">${icon('gear')}</span><div><h4>API / Lógica de negocio — Laravel 10</h4><p>Autenticación JWT · ingesta · CRUD · estadísticas y comparativas.</p></div></div>
     <div class="flowarrow">▼</div>
-    <div class="layer l3" data-anim style="--i:2"><span class="iconbox">${icon('database')}</span><div><h4>Datos — MySQL 8</h4><p>Áreas, estaciones, sensores, armados, muestras, usuarios y roles.</p></div></div>
+    <div class="layer l3" data-anim style="--i:2"><span class="iconbox">${icon('database')}</span><div><h4>Datos — MySQL 8</h4><p>Áreas, nodos IoT, sensores, armados, muestras, usuarios y roles.</p></div></div>
     <div class="flowarrow">▲ REST /api (Axios + JWT)</div>
     <div class="layer l4" data-anim style="--i:3"><span class="iconbox">${icon('screen')}</span><div><h4>Presentación — SPA Vue 3</h4><p>Monitoreo en tiempo real · estadísticas · administración · reportes PDF.</p></div></div>
     <div class="flowarrow">◀ ▶ widget de chat</div>

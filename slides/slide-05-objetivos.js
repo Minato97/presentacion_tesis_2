@@ -14,12 +14,12 @@ DECK.register({
   </div>
 
   <div class="grid cols-3 mt">
-    <div class="card brand" data-anim="pop" style="--i:1"><span class="iconbox">${icon('clipboard')}</span><h3>OE1 · Requerimientos</h3><p>ERS funcional y no funcional.</p></div>
-    <div class="card brand" data-anim="pop" style="--i:2"><span class="iconbox">${icon('chip')}</span><h3>OE2 · Arquitectura</h3><p>Componentes, datos e interfaces.</p></div>
-    <div class="card brand" data-anim="pop" style="--i:3"><span class="iconbox">${icon('screen')}</span><h3>OE3 · Plataforma + API</h3><p>Ingesta, visualización y administración.</p></div>
-    <div class="card brand" data-anim="pop" style="--i:4"><span class="iconbox">${icon('robot')}</span><h3>OE4 · MCP + chat</h3><p>Agente conversacional (≥85% consultas).</p></div>
-    <div class="card brand" data-anim="pop" style="--i:5"><span class="iconbox">${icon('check')}</span><h3>OE5 · Evaluación</h3><p>SUS ≥ 70 · 80% interpreta bien.</p></div>
-    <div class="card slate" data-anim="pop" style="--i:6">
+    <div class="card fancy brand" data-anim="pop" style="--i:1"><span class="iconbox">${icon('clipboard')}</span><h3>OE1 · Requerimientos</h3><p>ERS funcional y no funcional.</p></div>
+    <div class="card fancy brand" data-anim="pop" style="--i:2"><span class="iconbox">${icon('chip')}</span><h3>OE2 · Arquitectura</h3><p>Componentes, datos e interfaces.</p></div>
+    <div class="card fancy brand" data-anim="pop" style="--i:3"><span class="iconbox">${icon('screen')}</span><h3>OE3 · Plataforma + API</h3><p>Ingesta, visualización y administración.</p></div>
+    <div class="card fancy brand" data-anim="pop" style="--i:4"><span class="iconbox">${icon('robot')}</span><h3>OE4 · MCP + chat</h3><p>Agente conversacional (≥85% consultas).</p></div>
+    <div class="card fancy brand" data-anim="pop" style="--i:5"><span class="iconbox">${icon('check')}</span><h3>OE5 · Evaluación</h3><p>SUS ≥ 70 · 80% interpreta bien.</p></div>
+    <div class="card fancy slate" data-anim="pop" style="--i:6">
       <span class="iconbox">${icon('ruler')}</span><h3>Alcance / límites</h3>
       <p><b>Sí:</b> recibir, visualizar e interpretar.<br><b>No:</b> controlar hardware, predecir ni notificar.</p>
     </div>
