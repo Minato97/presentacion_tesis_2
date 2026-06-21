@@ -26,7 +26,7 @@
   max-width: 560px;
 }
 .charwrap.right { flex-direction: row-reverse; margin-left: auto; }
-.charfig { flex: none; width: clamp(104px, 11cqw, 168px); filter: drop-shadow(0 12px 20px var(--shadow)); }
+.charfig { flex: none; width: clamp(120px, 12.5cqw, 196px); filter: drop-shadow(0 12px 20px var(--shadow)); }
 .charsvg, .charimg { width: 100%; height: auto; display: block; }
 .charfig { animation: floatChar 4.5s ease-in-out infinite; }
 @keyframes floatChar { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
@@ -97,10 +97,10 @@ body::after {
 }
 
 /* ---------- Logos ---------- */
-.udg-escudo { height: clamp(70px, 9cqh, 120px); width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
+.udg-escudo { height: clamp(96px, 12cqh, 156px); width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
 .logo-corner {
-  position: fixed; top: 14px; right: 18px; height: 42px; width: auto; z-index: 30;
-  opacity: .9; filter: drop-shadow(0 3px 8px rgba(0,0,0,.25));
+  position: fixed; top: 18px; right: 22px; height: clamp(52px, 5.6vh, 104px); width: auto; z-index: 30;
+  opacity: .92; filter: drop-shadow(0 3px 8px rgba(0,0,0,.25));
 }
 [data-theme="dark"] .logo-corner { filter: drop-shadow(0 3px 8px rgba(0,0,0,.6)) brightness(1.05); }
 
