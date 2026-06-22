@@ -99,7 +99,7 @@ body::after {
 /* ---------- Logos ---------- */
 .udg-escudo { height: clamp(96px, 12cqh, 156px); width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
 .logo-corner {
-  position: fixed; top: 18px; right: 22px; height: clamp(52px, 5.6vh, 104px); width: auto; z-index: 30;
+  position: fixed; top: 18px; right: 22px; height: clamp(74px, 8.4vh, 150px); width: auto; z-index: 30;
   opacity: .92; filter: drop-shadow(0 3px 8px rgba(0,0,0,.25));
 }
 [data-theme="dark"] .logo-corner { filter: drop-shadow(0 3px 8px rgba(0,0,0,.6)) brightness(1.05); }

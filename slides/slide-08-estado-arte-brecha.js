@@ -12,7 +12,7 @@ DECK.register({
       <div class="barrow"><span class="blab">RQ3</span><div class="bartrack"><div class="barfill" data-v="14"></div></div><span class="bval" data-count="14">0</span></div>
       <div class="barrow"><span class="blab">RQ4</span><div class="bartrack"><div class="barfill" data-v="15"></div></div><span class="bval" data-count="15">0</span></div>
       <div class="barrow"><span class="blab">RQ5</span><div class="bartrack"><div class="barfill" data-v="13"></div></div><span class="bval" data-count="13">0</span></div>
-      <p class="fmeta">Estudios que aportan a cada pregunta (n=21). RQ3 = <b>UCD</b>, el área menos explorada.</p>
+      <p class="fmeta">Estudios que aportan a cada pregunta (n=21). RQ3 = <b>DCU</b>: aunque aparece en 14 estudios, casi siempre de forma <b>tangencial</b> (sin evaluación con usuarios reales); es la dimensión <b>menos desarrollada en profundidad</b>.</p>
     </div>
 
     <div>
