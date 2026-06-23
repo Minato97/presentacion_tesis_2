@@ -10,7 +10,7 @@ DECK.register({
       <ul class="ticks">
         <li data-anim style="--i:0"><b>PICO</b> definió <i>qué</i> buscar; <b>PRISMA</b> el <i>cómo</i> filtrar.</li>
         <li data-anim style="--i:1">Fuentes: <b>Scopus · IEEE Xplore · Web of Science</b> (mayo 2026).</li>
-        <li data-anim style="--i:2">El <b>cribado</b> se hizo por <b>título y resumen</b>; solo los elegibles se <b>leyeron a texto completo</b>.</li>
+        <li data-anim style="--i:2">El <b>cribado</b> se hizo por título y resumen; el texto completo solo se leyó en los estudios elegibles.</li>
         <li data-anim style="--i:3">4 fases: identificación → cribado → elegibilidad → inclusión.</li>
       </ul>
     </div>

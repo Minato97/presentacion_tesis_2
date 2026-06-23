@@ -317,7 +317,7 @@ function stat(s, x, y, w, num, label, color) {
   ticks(s, [
     "**PICO** definió qué buscar; **PRISMA** el cómo filtrar.",
     "Fuentes: **Scopus · IEEE Xplore · Web of Science** (mayo 2026).",
-    "El **cribado** se hizo por **título y resumen**; solo los elegibles se leyeron a texto completo.",
+    "El **cribado** se hizo por título y resumen; el texto completo solo se leyó en los estudios elegibles.",
     "4 fases: identificación → cribado → elegibilidad → inclusión.",
   ], { x: MX, y: 2.0, w: 6.2, h: 3.5, size: 13.5 });
   // embudo
