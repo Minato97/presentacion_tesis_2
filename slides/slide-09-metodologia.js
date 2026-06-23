@@ -22,6 +22,6 @@ DECK.register({
     <div class="card brand" data-anim="pop" style="--i:3"><span class="iconbox">${icon('user')}</span><h3>DCU · ISO 9241-210</h3><p>Fases 4–5: evaluación iterativa con usuarios reales.</p></div>
   </div>
 
-  <p class="fmeta mt" data-anim style="--i:4"><b>¿Por qué prototipado evolutivo?</b> Los requerimientos no se conocen por completo de inicio y los usuarios finales son productores no expertos: construir sobre un prototipo que se refina con su retroalimentación reduce el riesgo y valida cada incremento antes de invertir en el sistema final, frente a un modelo en cascada de requisitos cerrados.</p>
+  <p class="fmeta mt" data-anim style="--i:4"><b>¿Por qué prototipado evolutivo?</b> Los requerimientos no se conocen por completo al inicio y el sistema debe servir a usuarios de perfiles muy distintos —desde productores y ciudadanos sin formación técnica hasta investigadores y especialistas—: construir sobre un prototipo que se refina con la retroalimentación de todos ellos reduce el riesgo y valida cada incremento antes de invertir en el sistema final, frente a un modelo en cascada de requisitos cerrados.</p>
   `
 });

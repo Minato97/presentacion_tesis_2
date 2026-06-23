@@ -397,7 +397,7 @@ function stat(s, x, y, w, num, label, color) {
   const cw = (W - 2 * MX - 0.3 * 2) / 3, cy = 3.45, ch = 1.5;
   cards.forEach((c, i) => card(s, { x: MX + i * (cw + 0.3), y: cy, w: cw, h: ch, accent: c[3], icon: c[1], title: c[0], body: c[2], titleSize: 12 }));
   s.addShape("roundRect", { x: MX, y: 5.15, w: W - 2 * MX, h: 1.45, rectRadius: 0.1, fill: { color: C.bg2 }, line: { color: C.cardLine, width: 1 } });
-  s.addText([{ text: "¿Por qué prototipado evolutivo?  ", options: { bold: true, color: C.accent } }, ...R("Los requerimientos no se conocen por completo de inicio y los usuarios finales son productores no expertos: construir sobre un prototipo que se refina con su retroalimentación reduce el riesgo y valida cada incremento antes de invertir en el sistema final, frente a un modelo en cascada de requisitos cerrados.")], { x: MX + 0.3, y: 5.15, w: W - 2 * MX - 0.6, h: 1.45, valign: "middle", fontSize: 12, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.06 });
+  s.addText([{ text: "¿Por qué prototipado evolutivo?  ", options: { bold: true, color: C.accent } }, ...R("Los requerimientos no se conocen por completo al inicio y el sistema debe servir a usuarios de perfiles muy distintos —desde productores y ciudadanos sin formación técnica hasta investigadores y especialistas—: construir sobre un prototipo que se refina con la retroalimentación de todos ellos reduce el riesgo y valida cada incremento antes de invertir en el sistema final, frente a un modelo en cascada de requisitos cerrados.")], { x: MX + 0.3, y: 5.15, w: W - 2 * MX - 0.6, h: 1.45, valign: "middle", fontSize: 12, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.06 });
 })();
 
 // =====================================================================
