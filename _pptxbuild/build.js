@@ -246,7 +246,7 @@ function stat(s, x, y, w, num, label, color) {
     ["IoT y redes de sensores", "📡", "Nodos que miden aire, clima y suelo y publican lecturas.", C.teal],
     ["LLM", "🧠", "Modelos de lenguaje que interpretan y responden.", C.teal],
     ["Agentes inteligentes", "🤖", "Deciden qué herramienta usar para resolver la consulta.", C.teal],
-    ["MCP (Anthropic, 2024)", "🧩", "Protocolo que estandariza el acceso del LLM a los datos.", C.accent],
+    ["MCP", "🧩", "Protocolo que estandariza el acceso del LLM a los datos.", C.accent],
     ["RAG", "🔍", "Respuestas basadas en datos reales recuperados.", C.teal],
     ["DCU · ISO 9241-210", "🧑", "Diseño centrado en el usuario, interfaces accesibles.", C.sageDkr],
   ];
@@ -304,7 +304,7 @@ function stat(s, x, y, w, num, label, color) {
     gy += 0.78;
     if (i < 2) { s.addText("AND", { x: cx + 0.25, y: gy - 0.02, w: cw - 0.5, h: 0.22, align: "center", color: C.textSoft, bold: true, fontSize: 9, fontFace: FONT }); gy += 0.22; }
   });
-  foot(s, "MCP", "término emergente (Anthropic, 2024): central para RQ2 y diferenciador de esta revisión");
+  foot(s, "MCP", "término emergente: central para RQ2 y diferenciador de esta revisión");
 })();
 
 // =====================================================================
@@ -388,10 +388,10 @@ function stat(s, x, y, w, num, label, color) {
     s.addText(f[0], { x, y: sy + 0.1, w: sw, h: 0.3, align: "center", color: C.accent, bold: true, fontSize: 11, fontFace: FONT });
     s.addText(f[1], { x: x + 0.06, y: sy + 0.36, w: sw - 0.12, h: 0.58, align: "center", valign: "top", color: C.heading, bold: true, fontSize: 10, fontFace: FONT, lineSpacingMultiple: 0.98 });
   });
-  s.addText(R("Tres metodologías anidadas dentro del DSR (Peffers et al., 2007):"), { x: MX, y: 2.95, w: 12, h: 0.4, color: C.textSoft, fontSize: 13, fontFace: FONT });
+  s.addText(R("Tres metodologías anidadas dentro del DSR:"), { x: MX, y: 2.95, w: 12, h: 0.4, color: C.textSoft, fontSize: 13, fontFace: FONT });
   const cards = [
     ["RSL · PICO + PRISMA", "🔬", "Fases 1–2: fundamenta el problema y los objetivos.", C.teal],
-    ["Prototipado evolutivo (Sommerville, 2011)", "🔄", "Fase 3: baja fidelidad → funcional → sistema final.", C.accent],
+    ["Prototipado evolutivo", "🔄", "Fase 3: baja fidelidad → funcional → sistema final.", C.accent],
     ["DCU · ISO 9241-210", "🧑", "Fases 4–5: evaluación iterativa con usuarios reales.", C.sageDkr],
   ];
   const cw = (W - 2 * MX - 0.3 * 2) / 3, cy = 3.45, ch = 1.5;

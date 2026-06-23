@@ -30,6 +30,6 @@ DECK.register({
     </div>
   </div>
 
-  <div class="foot"><span class="badge">MCP</span> término emergente (Anthropic, 2024): central para RQ2 y diferenciador de esta revisión</div>
+  <div class="foot"><span class="badge">MCP</span> término emergente: central para RQ2 y diferenciador de esta revisión</div>
   `
 });
