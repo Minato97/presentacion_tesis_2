@@ -274,7 +274,7 @@ function stat(s, x, y, w, num, label, color) {
   kicker(s, "04", "Estado del arte · Preguntas de investigación y cadena de búsqueda");
   title(s, "Primero las preguntas… luego la búsqueda");
   const rqs = [
-    ["RQ1", "**Agentes + LLM** para interpretar datos ambientales vs. interfaces tradicionales."],
+    ["RQ1", "**Agentes + LLM** para interpretar datos medioambientales y edafológicos vs. interfaces tradicionales."],
     ["RQ2", "Ventajas del **MCP** para integrar datos **IoT heterogéneos**."],
     ["RQ3", "**Diseño centrado en el usuario** (UCD) y experiencia de usuario."],
     ["RQ4", "**Context-awareness** para personalizar servicios."],
@@ -447,12 +447,12 @@ function stat(s, x, y, w, num, label, color) {
   const hx = 6.85, hw = W - MX - hx;
   s.addShape("roundRect", { x: hx, y: cy, w: hw, h: ch, rectRadius: 0.1, fill: { color: C.surface }, line: { color: C.teal, width: 1.3 } });
   s.addText([{ text: "📡  Hardware — nodos IoT (ESP32)", options: { bold: true, color: C.teal } }], { x: hx + 0.25, y: cy + 0.15, w: hw - 0.5, h: 0.4, fontSize: 13.5, fontFace: FONT });
-  s.addText("12 sensores en 4 dominios. Cada uno con umbrales bajo / medio / alto.", { x: hx + 0.25, y: cy + 0.6, w: hw - 0.5, h: 0.4, fontSize: 11, color: C.text, fontFace: FONT });
+  s.addText("16 variables en 4 dominios. Cada una con umbrales bajo / medio / alto.", { x: hx + 0.25, y: cy + 0.6, w: hw - 0.5, h: 0.4, fontSize: 11, color: C.text, fontFace: FONT });
   const chips = [
     ["Aire: DHT11 · BMP280 · PMS5003 · MH-Z16", C.chip],
     ["Radiación: GUVA · BH1750", C.chip],
     ["Clima: pluviómetro · anemómetro · veleta", C.chip],
-    ["Suelo (NPK): JXBS-3001 N·P·K", "FCEDE1"],
+    ["Suelo: JXBS-3001 — N·P·K · conductividad · humedad · temperatura · pH", "FCEDE1"],
   ];
   let chy = cy + 1.15;
   chips.forEach((c) => {
@@ -461,7 +461,7 @@ function stat(s, x, y, w, num, label, color) {
     chy += 0.5;
   });
   // stats
-  const stats = [[12, "sensores"], [4, "dominios"], [5, "capas"], [4, "herramientas MCP"]];
+  const stats = [[16, "variables"], [4, "dominios"], [5, "capas"], [4, "herramientas MCP"]];
   const sw = 2.8, sy = 5.35;
   stats.forEach((st, i) => stat(s, MX + 0.4 + i * 3.05, sy, sw, st[0], st[1], C.accent));
 })();

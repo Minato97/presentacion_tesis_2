@@ -9,7 +9,7 @@ DECK.register({
   <div class="grid cols-2 mt" style="align-items:start;gap:26px">
     <div>
       <ol class="rqlist">
-        <li data-anim style="--i:0"><span class="rqn">RQ1</span> <span><b>Agentes + LLM</b> para interpretar datos ambientales <i>vs.</i> interfaces tradicionales.</span></li>
+        <li data-anim style="--i:0"><span class="rqn">RQ1</span> <span><b>Agentes + LLM</b> para interpretar datos medioambientales y edafológicos <i>vs.</i> interfaces tradicionales.</span></li>
         <li data-anim style="--i:1"><span class="rqn">RQ2</span> <span>Ventajas del <b>MCP</b> para integrar datos <b>IoT heterogéneos</b>.</span></li>
         <li data-anim style="--i:2"><span class="rqn">RQ3</span> <span><b>Diseño centrado en el usuario</b> (UCD) y experiencia de usuario.</span></li>
         <li data-anim style="--i:3"><span class="rqn">RQ4</span> <span><b>Context-awareness</b> para personalizar servicios.</span></li>

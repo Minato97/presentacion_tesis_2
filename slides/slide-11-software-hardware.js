@@ -20,18 +20,18 @@ DECK.register({
 
     <div class="card teal" data-anim style="--i:1">
       <h3 class="h3ic" style="color:var(--teal)">${icon('sensor')} Hardware — nodos IoT (ESP32)</h3>
-      <p style="margin-bottom:10px">12 sensores en 4 dominios. Cada uno con umbrales bajo / medio / alto.</p>
+      <p style="margin-bottom:10px">16 variables en 4 dominios. Cada una con umbrales bajo / medio / alto.</p>
       <div class="chips">
         <span class="chip">${icon('wind')} Aire: DHT11 · BMP280 · PMS5003 · MH-Z16</span>
         <span class="chip">${icon('sun')} Radiación: GUVA · BH1750</span>
         <span class="chip">${icon('rain')} Clima: pluviómetro · anemómetro · veleta</span>
-        <span class="chip orange">${icon('sprout')} Suelo (NPK): JXBS-3001 N·P·K</span>
+        <span class="chip orange">${icon('sprout')} Suelo: JXBS-3001 — N·P·K · conductividad · humedad · temperatura · pH</span>
       </div>
     </div>
   </div>
 
   <div class="row mt" style="justify-content:space-around">
-    <div class="stat" data-anim="pop" style="--i:2"><div class="big" data-count="12">0</div><div class="lbl">sensores</div></div>
+    <div class="stat" data-anim="pop" style="--i:2"><div class="big" data-count="16">0</div><div class="lbl">variables</div></div>
     <div class="stat" data-anim="pop" style="--i:3"><div class="big" data-count="4">0</div><div class="lbl">dominios</div></div>
     <div class="stat" data-anim="pop" style="--i:4"><div class="big" data-count="5">0</div><div class="lbl">capas</div></div>
     <div class="stat" data-anim="pop" style="--i:5"><div class="big" data-count="4">0</div><div class="lbl">herramientas MCP</div></div>
