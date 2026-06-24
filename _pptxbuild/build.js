@@ -109,7 +109,10 @@ function bubble(s, who, text, o) {
   const av = 0.72;
   s.addShape("roundRect", { x: o.x, y: o.y, w: o.w, h: o.h, rectRadius: 0.12, fill: { color: C.surface }, line: { color: accent, width: 1.25 } });
   s.addShape("ellipse", { x: o.x + 0.12, y: o.y + o.h / 2 - av / 2, w: av, h: av, fill: { color: isEco ? "E7F6F8" : "FCEDE1" }, line: { color: accent, width: 1 } });
-  s.addImage({ path: AV[who], x: o.x + 0.14, y: o.y + o.h / 2 - av / 2 + 0.02, w: av - 0.04, h: av - 0.04, sizing: { type: "contain", w: av - 0.04, h: av - 0.04 } });
+  // avatar a su proporción real (EcoFlow es más alto que ancho), centrado en el círculo — sin 'sizing' para no deformarlo
+  const aR = isEco ? 484 / 658 : 1, ih = 0.6, iw = ih * aR;
+  const cX = o.x + 0.12, cY = o.y + o.h / 2 - av / 2;
+  s.addImage({ path: AV[who], x: cX + (av - iw) / 2, y: cY + (av - ih) / 2, w: iw, h: ih });
   s.addText([{ text: (isEco ? "EcoFlow" : "Leo") + "  ", options: { bold: true, color: accent } }, ...R(text)], { x: o.x + 0.12 + av + 0.14, y: o.y + 0.1, w: o.w - (0.12 + av + 0.26), h: o.h - 0.2, valign: "middle", fontSize: o.size || 11, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.03 });
 }
 
