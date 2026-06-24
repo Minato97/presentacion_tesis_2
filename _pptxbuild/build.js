@@ -499,6 +499,34 @@ function stat(s, x, y, w, num, label, color) {
 })();
 
 // =====================================================================
+// SLIDE 13b (12b) — Avance del sistema (4 capturas)
+// =====================================================================
+(function () {
+  const s = contentSlide();
+  kicker(s, "07", "Avance del sistema · diseño y desarrollo");
+  title(s, "Primeras pantallas del prototipo funcional", { size: 24 });
+  subtitle(s, "Prototipo navegable de **SMMyE** con los tres perfiles de acceso, los módulos principales y el asistente **EcoFlow**.", 1.6);
+
+  function shotCard(x, y, w, h, img, n, ttl, sub) {
+    s.addShape("roundRect", { x, y, w, h, rectRadius: 0.09, fill: { color: C.surface }, line: { color: C.cardLine, width: 1 }, shadow: { type: "outer", color: "B9C3A8", blur: 6, offset: 2, angle: 90, opacity: 0.35 } });
+    const pad = 0.1, imgH = h - 0.72;
+    s.addImage({ path: img, x: x + pad, y: y + pad, w: w - 2 * pad, h: imgH, sizing: { type: "cover", w: w - 2 * pad, h: imgH } });
+    s.addShape("ellipse", { x: x + pad + 0.1, y: y + pad + 0.1, w: 0.36, h: 0.36, fill: { color: "10B981" }, line: { color: "FFFFFF", width: 1 } });
+    s.addText(String(n), { x: x + pad + 0.1, y: y + pad + 0.1, w: 0.36, h: 0.36, align: "center", valign: "middle", color: "FFFFFF", bold: true, fontSize: 13, fontFace: FONT });
+    s.addText([{ text: ttl, options: { bold: true, color: C.heading, fontSize: 12.5 } }, { text: "\n" + sub, options: { color: C.textSoft, fontSize: 9.5 } }], { x: x + pad + 0.05, y: y + imgH + 0.15, w: w - 2 * pad - 0.1, h: 0.52, valign: "top", fontFace: FONT, lineSpacingMultiple: 1.0 });
+  }
+
+  const cw = (W - 2 * MX - 0.3) / 2, ch = 2.3, gap = 0.3, y1 = 2.05, y2 = y1 + ch + 0.16;
+  const xL = MX, xR = MX + cw + gap;
+  shotCard(xL, y1, cw, ch, A("sys-01-landing.png"), 1, "Página de inicio (landing)", "Portal público de acceso e información.");
+  shotCard(xR, y1, cw, ch, A("sys-02-invitado.png"), 2, "Modo invitado", "Monitoreo público, sin necesidad de cuenta.");
+  shotCard(xL, y2, cw, ch, A("sys-03-admin.png"), 3, "Panel de administrador", "Resumen: nodos, sensores, áreas y usuarios.");
+  shotCard(xR, y2, cw, ch, A("sys-04-monitoreo.png"), 4, "Monitoreo en tiempo real", "Lecturas actuales de cada sensor por nodo IoT.");
+
+  foot(s, "En desarrollo", "Laravel + Vue 3 · MySQL · Nodos IoT · EcoFlow (n8n + MCP) · 3 roles de usuario");
+})();
+
+// =====================================================================
 // SLIDE 14 (02c) — Observaciones del protocolo
 // =====================================================================
 function obsSlide(num, kick, ttl, sub, pairs) {
