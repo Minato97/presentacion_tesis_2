@@ -1,34 +1,34 @@
-/* Diapositiva 12b — Avance del sistema (1/2): accesos públicos
-   Va DESPUÉS de Requerimientos. Dos capturas grandes a proporción nativa 16:9:
-   página de inicio (landing) y modo invitado. */
+/* Diapositiva 12c — Avance del sistema (2/2): área autenticada
+   Dos capturas grandes a proporción nativa 16:9: panel de administrador y
+   monitoreo en tiempo real. Reusa las clases .shotgrid2/.shot de la slide 12b. */
 DECK.register({
   section: 'Avance del sistema',
   html: `
   <div class="kicker"><span class="num">07</span> Avance del sistema · diseño y desarrollo</div>
-  <h2 class="title">Primeras pantallas del prototipo funcional</h2>
+  <h2 class="title">El prototipo en uso: administración y monitoreo</h2>
   <p class="subtitle" style="margin-top:6px;max-width:94ch">
-    Como primer avance de la fase de diseño y desarrollo, ya se cuenta con un prototipo
-    navegable de <b>SMMyE</b>. Aquí los <b>accesos públicos</b>: la página de inicio y el modo invitado.
+    En el <b>área autenticada</b>, el administrador gestiona la red y consulta el
+    <b>monitoreo en tiempo real</b> de cada nodo IoT con clasificación por umbrales.
   </p>
 
   <div class="shotgrid2">
     <figure class="shot" data-anim="pop" style="--i:1">
-      <div class="shot-img"><img src="assets/sys-01-landing.png" alt="Página de inicio del sistema SMMyE" />
-        <span class="shot-badge">1</span></div>
-      <figcaption><b>Página de inicio (landing)</b><span>Portal público de acceso e información del sistema</span></figcaption>
+      <div class="shot-img"><img src="assets/sys-03-admin.png" alt="Panel de administración" />
+        <span class="shot-badge">3</span></div>
+      <figcaption><b>Panel de administrador</b><span>Resumen de la red: nodos, sensores, áreas y usuarios</span></figcaption>
     </figure>
     <figure class="shot" data-anim="pop" style="--i:2">
-      <div class="shot-img"><img src="assets/sys-02-invitado.png" alt="Modo invitado · monitoreo público" />
-        <span class="shot-badge">2</span></div>
-      <figcaption><b>Modo invitado</b><span>Monitoreo público, sin necesidad de cuenta</span></figcaption>
+      <div class="shot-img"><img src="assets/sys-04-monitoreo.png" alt="Monitoreo en tiempo real" />
+        <span class="shot-badge">4</span></div>
+      <figcaption><b>Monitoreo en tiempo real</b><span>Lecturas actuales de cada sensor por nodo IoT</span></figcaption>
     </figure>
   </div>
 
   <div class="row" data-anim style="--i:3;gap:8px;margin-top:clamp(8px,1.4cqh,18px);flex-wrap:wrap">
     <span class="chip solid">Avance en desarrollo</span>
-    <span class="chip">3 perfiles de acceso</span>
-    <span class="chip">Laravel + Vue 3</span>
-    <span class="chip">EcoFlow · n8n + MCP</span>
+    <span class="chip">7 módulos principales</span>
+    <span class="chip">MySQL · Nodos IoT</span>
+    <span class="chip">Asistente EcoFlow</span>
   </div>
 
   <style>
@@ -37,7 +37,7 @@ DECK.register({
     .shot{margin:0;background:#ffffff;border:1px solid rgba(15,23,42,.08);border-radius:18px;
       overflow:hidden;box-shadow:0 14px 34px rgba(15,23,42,.18)}
     .shot-img{position:relative;line-height:0}
-    .shot-img img{display:block;width:100%;height:auto} /* proporción nativa 16:9, sin distorsión */
+    .shot-img img{display:block;width:100%;height:auto}
     .shot-badge{position:absolute;left:14px;top:14px;width:clamp(30px,2.8cqw,42px);
       height:clamp(30px,2.8cqw,42px);display:grid;place-items:center;border-radius:50%;
       background:#10b981;color:#fff;font-weight:800;font-size:clamp(15px,1.7cqw,23px);

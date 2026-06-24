@@ -499,32 +499,49 @@ function stat(s, x, y, w, num, label, color) {
 })();
 
 // =====================================================================
-// SLIDE 13b (12b) — Avance del sistema (4 capturas)
+// SLIDE 13b + 13c (12b/12c) — Avance del sistema (2 + 2 capturas grandes)
 // =====================================================================
-(function () {
+// Una captura grande a proporción NATIVA 16:9 (sin distorsión) con caption.
+function shotBig(s, x, y, w, h, img, n, ttl, sub) {
+  const capH = 0.55, pad = 0.1;
+  s.addShape("roundRect", { x: x - pad, y: y - pad, w: w + 2 * pad, h: h + capH + 2 * pad, rectRadius: 0.1, fill: { color: C.surface }, line: { color: C.cardLine, width: 1 }, shadow: { type: "outer", color: "B9C3A8", blur: 6, offset: 2, angle: 90, opacity: 0.3 } });
+  s.addImage({ path: img, x, y, w, h }); // sin 'sizing' → conserva la relación de aspecto 16:9
+  s.addShape("ellipse", { x: x + 0.12, y: y + 0.12, w: 0.42, h: 0.42, fill: { color: "10B981" }, line: { color: "FFFFFF", width: 1.25 } });
+  s.addText(String(n), { x: x + 0.12, y: y + 0.12, w: 0.42, h: 0.42, align: "center", valign: "middle", color: "FFFFFF", bold: true, fontSize: 15, fontFace: FONT });
+  s.addText([{ text: ttl, options: { bold: true, color: C.heading, fontSize: 13 } }, { text: "\n" + sub, options: { color: C.textSoft, fontSize: 10 } }], { x, y: y + h + 0.06, w, h: capH, valign: "top", fontFace: FONT, lineSpacingMultiple: 1.0 });
+}
+function avanceSlide(ttl, sub, left, right, chips) {
   const s = contentSlide();
   kicker(s, "07", "Avance del sistema · diseño y desarrollo");
-  title(s, "Primeras pantallas del prototipo funcional", { size: 24 });
-  subtitle(s, "Prototipo navegable de **SMMyE** con los tres perfiles de acceso, los módulos principales y el asistente **EcoFlow**.", 1.6);
-
-  // x,y = esquina de la imagen; w,h = tamaño de la imagen a su proporción NATIVA 16:9 (sin distorsión)
-  function shotCard(x, y, w, h, img, n, ttl, sub) {
-    const capH = 0.5, pad = 0.1;
-    s.addShape("roundRect", { x: x - pad, y: y - pad, w: w + 2 * pad, h: h + capH + 2 * pad, rectRadius: 0.08, fill: { color: C.surface }, line: { color: C.cardLine, width: 1 }, shadow: { type: "outer", color: "B9C3A8", blur: 5, offset: 2, angle: 90, opacity: 0.3 } });
-    s.addImage({ path: img, x, y, w, h }); // sin 'sizing' → conserva la relación de aspecto
-    s.addShape("ellipse", { x: x + 0.08, y: y + 0.08, w: 0.34, h: 0.34, fill: { color: "10B981" }, line: { color: "FFFFFF", width: 1 } });
-    s.addText(String(n), { x: x + 0.08, y: y + 0.08, w: 0.34, h: 0.34, align: "center", valign: "middle", color: "FFFFFF", bold: true, fontSize: 12, fontFace: FONT });
-    s.addText([{ text: ttl, options: { bold: true, color: C.heading, fontSize: 11.5 } }, { text: "\n" + sub, options: { color: C.textSoft, fontSize: 9 } }], { x, y: y + h + 0.05, w, h: capH, valign: "top", fontFace: FONT, lineSpacingMultiple: 1.0 });
-  }
-
-  const imgW = 3.7, imgH = imgW * 9 / 16, gap = 0.5; // 16:9 exacto (capturas 3200x1800)
+  title(s, ttl, { size: 24 });
+  subtitle(s, sub, 1.62);
+  const imgW = 5.6, imgH = imgW * 9 / 16, gap = 0.6; // 16:9
   const xL = (W - (2 * imgW + gap)) / 2, xR = xL + imgW + gap;
-  const y1 = 1.95, y2 = y1 + imgH + 0.5 + 0.2;
-  shotCard(xL, y1, imgW, imgH, A("sys-01-landing.png"), 1, "Página de inicio (landing)", "Portal público de acceso e información.");
-  shotCard(xR, y1, imgW, imgH, A("sys-02-invitado.png"), 2, "Modo invitado", "Monitoreo público, sin necesidad de cuenta.");
-  shotCard(xL, y2, imgW, imgH, A("sys-03-admin.png"), 3, "Panel de administrador", "Resumen: nodos, sensores, áreas y usuarios.");
-  shotCard(xR, y2, imgW, imgH, A("sys-04-monitoreo.png"), 4, "Monitoreo en tiempo real", "Lecturas actuales de cada sensor por nodo IoT.");
-})();
+  const y = 2.25;
+  shotBig(s, xL, y, imgW, imgH, A(left[0]), left[1], left[2], left[3]);
+  shotBig(s, xR, y, imgW, imgH, A(right[0]), right[1], right[2], right[3]);
+  let cx = MX; const cy = 6.55;
+  chips.forEach((c, i) => {
+    const w = 0.3 + c.length * 0.085;
+    s.addShape("roundRect", { x: cx, y: cy, w, h: 0.46, rectRadius: 0.23, fill: { color: i === 0 ? C.sageDkr : C.chip } });
+    s.addText(c, { x: cx, y: cy, w, h: 0.46, align: "center", valign: "middle", color: i === 0 ? "FFFFFF" : C.brand, bold: true, fontSize: 11.5, fontFace: FONT });
+    cx += w + 0.18;
+  });
+}
+avanceSlide(
+  "Primeras pantallas del prototipo funcional",
+  "Primer avance de la fase de diseño y desarrollo: un prototipo navegable de **SMMyE**. Estos son los accesos públicos.",
+  ["sys-01-landing.png", 1, "Página de inicio (landing)", "Portal público de acceso e información del sistema."],
+  ["sys-02-invitado.png", 2, "Modo invitado", "Monitoreo público, sin necesidad de cuenta."],
+  ["Avance en desarrollo", "3 perfiles de acceso", "Laravel + Vue 3", "EcoFlow · n8n + MCP"]
+);
+avanceSlide(
+  "El prototipo en uso: administración y monitoreo",
+  "En el área autenticada, el administrador gestiona la red y consulta el **monitoreo en tiempo real** de cada nodo IoT.",
+  ["sys-03-admin.png", 3, "Panel de administrador", "Resumen de la red: nodos, sensores, áreas y usuarios."],
+  ["sys-04-monitoreo.png", 4, "Monitoreo en tiempo real", "Lecturas actuales de cada sensor por nodo IoT."],
+  ["Avance en desarrollo", "7 módulos principales", "MySQL · Nodos IoT", "Asistente EcoFlow"]
+);
 
 // =====================================================================
 // SLIDE 14 (02c) — Observaciones del protocolo
