@@ -3,7 +3,7 @@ DECK.register({
   section: 'Justificación',
   html: `
   <div class="kicker"><span class="num">01</span> Justificación</div>
-  <h2 class="title">Democratizar el acceso a la información ambiental</h2>
+  <h2 class="title">Democratizar el acceso a la información medioambiental y edafológica</h2>
 
   <div class="grid cols-4 mt">
     <div class="card brand" data-anim="pop" style="--i:0"><span class="iconbox">${icon('chat')}</span><h3>Acceso</h3><p>Consultar e interpretar datos en lenguaje natural (LLM + MCP).</p></div>
@@ -13,8 +13,8 @@ DECK.register({
   </div>
 
   <p class="lead mt" data-anim style="--i:4">
-    Fortalece la <span class="hl">investigación, docencia y planeación ambiental</span> de CUValles y la Región Valles,
-    impulsando la <strong>transformación digital</strong> de la gestión medioambiental.
+    Fortalece la <span class="hl">investigación, docencia y planeación medioambiental y edafológica</span> de CUValles y la Región Valles,
+    impulsando la <strong>transformación digital</strong> de la gestión medioambiental y edafológica.
   </p>
   `
 });

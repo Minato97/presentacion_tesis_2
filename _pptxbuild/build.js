@@ -179,9 +179,9 @@ function stat(s, x, y, w, num, label, color) {
 (function () {
   const s = contentSlide();
   kicker(s, "01", "Planteamiento del problema");
-  title(s, "Hay datos ambientales… pero son difíciles de entender");
+  title(s, "Hay datos medioambientales y edafológicos… pero son difíciles de entender", { size: 22 });
   ticks(s, [
-    "Los **nodos IoT** generan datos técnicos: valores, unidades, umbrales y series temporales.",
+    "Los **nodos IoT** generan datos técnicos del aire, el clima y el suelo: valores, unidades, umbrales y series temporales.",
     "Interpretarlos exige **conocimiento especializado**.",
     "Resultado: __inaccesibles__ para usuarios no expertos de la Región Valles.",
     "Además, los datos están **dispersos** y en formatos poco aprovechables.",
@@ -198,7 +198,7 @@ function stat(s, x, y, w, num, label, color) {
 (function () {
   const s = contentSlide();
   kicker(s, "01", "Justificación");
-  title(s, "Democratizar el acceso a la información ambiental");
+  title(s, "Democratizar el acceso a la información medioambiental y edafológica", { size: 22 });
   const items = [
     ["Acceso", "💬", "Consultar e interpretar datos en lenguaje natural (LLM + MCP)."],
     ["Visualización", "📊", "Tablas, tarjetas y gráficos dinámicos para el análisis científico."],
@@ -210,7 +210,7 @@ function stat(s, x, y, w, num, label, color) {
     card(s, { x: MX + i * (cw + gap), y: y0, w: cw, h: ch, accent: C.sageDkr, icon: it[1], title: it[0], body: it[2] });
   });
   s.addShape("roundRect", { x: MX, y: 4.9, w: W - 2 * MX, h: 1.5, rectRadius: 0.1, fill: { color: C.bg2 }, line: { color: C.cardLine, width: 1 } });
-  s.addText(R("Fortalece la __investigación, docencia y planeación ambiental__ de CUValles y la Región Valles, impulsando la **transformación digital** de la gestión medioambiental."), { x: MX + 0.3, y: 4.9, w: W - 2 * MX - 0.6, h: 1.5, valign: "middle", fontSize: 15, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.1 });
+  s.addText(R("Fortalece la __investigación, docencia y planeación medioambiental y edafológica__ de CUValles y la Región Valles, impulsando la **transformación digital** de la gestión medioambiental y edafológica."), { x: MX + 0.3, y: 4.9, w: W - 2 * MX - 0.6, h: 1.5, valign: "middle", fontSize: 15, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.1 });
 })();
 
 // =====================================================================
@@ -223,19 +223,24 @@ function stat(s, x, y, w, num, label, color) {
   s.addShape("roundRect", { x: MX, y: 1.0, w: W - 2 * MX, h: 1.5, rectRadius: 0.1, fill: { color: C.surface }, line: { color: C.accent, width: 1.5 } });
   s.addText([{ text: "🎯  Objetivo general", options: { bold: true, color: C.accent, fontSize: 15 } }], { x: MX + 0.25, y: 1.12, w: 11, h: 0.4, fontFace: FONT });
   s.addText(R("Desarrollar y evaluar una **plataforma web** que integra un **Agente Inteligente** (MCP + LLM) para facilitar el acceso, gestión y comprensión de los datos de los nodos IoT del SMMyE a usuarios con distintos niveles de conocimiento."), { x: MX + 0.25, y: 1.52, w: W - 2 * MX - 0.5, h: 0.9, fontSize: 12.5, color: C.text, fontFace: FONT, lineSpacingMultiple: 1.04 });
+  s.addText("Objetivos específicos:", { x: MX, y: 2.58, w: 6, h: 0.3, color: C.textSoft, bold: true, fontSize: 12.5, fontFace: FONT });
   const items = [
-    ["OE1 · Requerimientos", "📋", "ERS funcional y no funcional.", C.sageDkr],
-    ["OE2 · Arquitectura", "🧩", "Componentes, datos e interfaces.", C.sageDkr],
-    ["OE3 · Plataforma + API", "🖥️", "Ingesta, visualización y administración.", C.sageDkr],
-    ["OE4 · MCP + chat", "🤖", "Agente conversacional (≥85% consultas).", C.sageDkr],
-    ["OE5 · Evaluación", "✓", "SUS ≥ 70 · 80% interpreta bien.", C.sageDkr],
-    ["Alcance / límites", "📐", "**Sí:** recibir, visualizar e interpretar.  **No:** controlar hardware, predecir ni notificar.", C.slate],
+    ["OE1 · Requerimientos", "📋", "Elaborar la ERS funcional y no funcional.", C.sageDkr],
+    ["OE2 · Arquitectura", "🧩", "Diseñar componentes, datos e interfaces.", C.sageDkr],
+    ["OE3 · Plataforma web + API", "🖥️", "Construir la API que **recibe** los datos de los nodos, los **visualiza** (monitoreo y estadísticas) y **administra** el catálogo.", C.sageDkr],
+    ["OE4 · Agente MCP + chat", "🤖", "Integrar el asistente conversacional (≥85% consultas).", C.sageDkr],
+    ["OE5 · Evaluación", "✓", "Validar con usuarios (SUS ≥ 70 · 80% interpreta bien).", C.sageDkr],
   ];
-  const cols = 3, gap = 0.3, cw = (W - 2 * MX - gap * (cols - 1)) / cols, ch = 1.75, y0 = 2.75;
+  const cols = 3, gap = 0.28, cw = (W - 2 * MX - gap * (cols - 1)) / cols, ch = 1.45, y0 = 2.88;
   items.forEach((it, i) => {
     const cxx = MX + (i % cols) * (cw + gap), cyy = y0 + Math.floor(i / cols) * (ch + gap);
-    card(s, { x: cxx, y: cyy, w: cw, h: ch, accent: it[3], icon: it[1], title: it[0], body: it[2], titleSize: 12.5 });
+    card(s, { x: cxx, y: cyy, w: cw, h: ch, accent: it[3], icon: it[1], title: it[0], body: it[2], titleSize: 12 });
   });
+  // Alcance y limitaciones — banda separada (NO es un objetivo)
+  const ay = y0 + 2 * (ch + gap) + 0.06;
+  s.addShape("roundRect", { x: MX, y: ay, w: W - 2 * MX, h: 0.92, rectRadius: 0.1, fill: { color: C.bg2 }, line: { color: C.slate, width: 1.3 } });
+  s.addText([{ text: "📐  Alcance y limitaciones", options: { bold: true, color: C.slate } }, { text: "   — delimitan el proyecto; no son objetivos", options: { color: C.textSoft, italic: true } }], { x: MX + 0.25, y: ay + 0.1, w: W - 2 * MX - 0.5, h: 0.32, fontSize: 12, fontFace: FONT });
+  s.addText([{ text: "Sí: ", options: { bold: true, color: C.green } }, { text: "recibir, visualizar e interpretar datos.    " }, { text: "No: ", options: { bold: true, color: C.red } }, { text: "controlar hardware, predecir ni enviar notificaciones." }], { x: MX + 0.25, y: ay + 0.46, w: W - 2 * MX - 0.5, h: 0.38, valign: "middle", fontSize: 12, color: C.text, fontFace: FONT });
 })();
 
 // =====================================================================
@@ -280,7 +285,7 @@ function stat(s, x, y, w, num, label, color) {
     ["RQ1", "**Agentes + LLM** para interpretar datos medioambientales y edafológicos vs. interfaces tradicionales."],
     ["RQ2", "Ventajas del **MCP** para integrar datos **IoT heterogéneos**."],
     ["RQ3", "**Diseño centrado en el usuario** (UCD) y experiencia de usuario."],
-    ["RQ4", "**Context-awareness** para personalizar servicios."],
+    ["RQ4", "**Sensibilidad al contexto** (context-awareness): adaptar la información al **perfil, ubicación y entorno** del usuario."],
     ["RQ5", "Técnicas **RAG** para precisión en datos científicos."],
   ];
   let y = 2.0;
