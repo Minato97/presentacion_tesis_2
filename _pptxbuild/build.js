@@ -149,6 +149,10 @@ function stat(s, x, y, w, num, label, color) {
   });
   bubble(s, "leo", "Oye **EcoFlow**, ¿qué vamos a ver hoy en estos avances?", { x: 2.0, y: 5.75, w: 4.4, h: 1.0 });
   bubble(s, "eco", "¡El problema, los objetivos, el estado del arte y la propuesta del sistema! 🌎", { x: 6.9, y: 5.75, w: 4.4, h: 1.0 });
+  // Link a la presentación desplegada (GitHub Pages)
+  const lurl = "https://minato97.github.io/presentacion_tesis_2/";
+  s.addShape("roundRect", { x: 3.17, y: 6.96, w: 7.0, h: 0.42, rectRadius: 0.21, fill: { color: "FFFFFF", transparency: 86 }, line: { color: "FFFFFF", width: 0.75 } });
+  s.addText([{ text: "Presentación en línea:  ", options: { color: "E7ECE3" } }, { text: lurl, options: { color: C.sage, bold: true, hyperlink: { url: lurl } } }], { x: 3.17, y: 6.96, w: 7.0, h: 0.42, align: "center", valign: "middle", fontSize: 11.5, fontFace: FONT });
 })();
 
 // =====================================================================
@@ -598,20 +602,20 @@ obsSlide("★", "Seguimiento · seminario 1.er semestre", "Atención a las obser
   const s = contentSlide();
   kicker(s, "08", "Retribución social");
   title(s, "Retribución social del semestre");
-  // tarjeta SGPI
-  const cx = MX, cw = 5.2, cy = 2.0, ch = 3.6;
-  s.addShape("roundRect", { x: cx, y: cy, w: cw, h: ch, rectRadius: 0.1, fill: { color: C.surface }, line: { color: C.sageDkr, width: 1.4 } });
-  s.addShape("roundRect", { x: cx + cw / 2 - 0.45, y: cy + 0.35, w: 0.9, h: 0.9, rectRadius: 0.14, fill: { color: C.sageDkr } });
-  s.addText("🤝", { x: cx + cw / 2 - 0.45, y: cy + 0.35, w: 0.9, h: 0.9, align: "center", valign: "middle", fontSize: 32, color: "FFFFFF", fontFace: FONT });
-  s.addText("Proyecto SGPI · periodo 2026A", { x: cx + 0.3, y: cy + 1.4, w: cw - 0.6, h: 0.5, align: "center", color: C.heading, bold: true, fontSize: 15, fontFace: FONT });
-  s.addShape("roundRect", { x: cx + cw / 2 - 0.85, y: cy + 2.05, w: 1.7, h: 0.45, rectRadius: 0.22, fill: { color: C.green } });
-  s.addText("Cumplida", { x: cx + cw / 2 - 0.85, y: cy + 2.05, w: 1.7, h: 0.45, align: "center", valign: "middle", color: "FFFFFF", bold: true, fontSize: 12, fontFace: FONT });
-  s.addText("Sistema para la Gestión de Proyectos de Investigación", { x: cx + 0.3, y: cy + 2.65, w: cw - 0.6, h: 0.7, align: "center", color: C.textSoft, fontSize: 11.5, fontFace: FONT });
+  // Banner SGPI (una sola columna, ancho completo)
+  const by = 1.95, bh = 1.0;
+  s.addShape("roundRect", { x: MX, y: by, w: W - 2 * MX, h: bh, rectRadius: 0.1, fill: { color: C.surface }, line: { color: C.sageDkr, width: 1.4 } });
+  s.addShape("roundRect", { x: MX + 0.25, y: by + 0.2, w: 0.6, h: 0.6, rectRadius: 0.12, fill: { color: C.sageDkr } });
+  s.addText("🤝", { x: MX + 0.25, y: by + 0.2, w: 0.6, h: 0.6, align: "center", valign: "middle", fontSize: 24, color: "FFFFFF", fontFace: FONT });
+  s.addText([{ text: "Proyecto SGPI · periodo 2026A", options: { bold: true, color: C.heading, fontSize: 15 } }], { x: MX + 1.05, y: by + 0.16, w: 8, h: 0.4, valign: "middle", fontFace: FONT });
+  s.addText("Sistema para la Gestión de Proyectos de Investigación", { x: MX + 1.05, y: by + 0.56, w: 8.5, h: 0.34, color: C.textSoft, fontSize: 11.5, fontFace: FONT });
+  s.addShape("roundRect", { x: W - MX - 1.7, y: by + bh / 2 - 0.23, w: 1.5, h: 0.46, rectRadius: 0.23, fill: { color: C.green } });
+  s.addText("Cumplida", { x: W - MX - 1.7, y: by + bh / 2 - 0.23, w: 1.5, h: 0.46, align: "center", valign: "middle", color: "FFFFFF", bold: true, fontSize: 12, fontFace: FONT });
   ticks(s, [
     "Colaboración en el proyecto **Sistema para la Gestión de Proyectos de Investigación (SGPI)** durante el **periodo 2026A**.",
     "Aporte en ingeniería de software al desarrollo del SGPI, aplicando los conocimientos de la maestría.",
-    "Para 3.er semestre: planeación de **créditos de movilidad** y carta de invitación.",
-  ], { x: 6.4, y: 2.2, w: 6.3, h: 3.2, size: 14 });
+    "Para 3.er semestre: **créditos de movilidad** en el **CETIS 63**, apoyando el desarrollo de un sistema de **control de acceso estudiantil** al plantel, con **notificaciones en tiempo real a los padres de familia**.",
+  ], { x: MX, y: 3.35, w: W - 2 * MX, h: 3.2, size: 15 });
 })();
 
 // =====================================================================

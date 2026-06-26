@@ -95,12 +95,12 @@ h2.title {
 /* Listas con viñeta marcada */
 ul.ticks { list-style: none; display: grid; gap: 12px; }
 ul.ticks li {
-  display: flex; gap: 12px; align-items: flex-start;
+  position: relative; padding-left: 28px;
   font-size: clamp(20px, 2cqw, 28px); line-height: 1.45; color: var(--text);
 }
 ul.ticks li::before {
-  content: "▸"; color: var(--orange); font-weight: 900; flex: none;
-  margin-top: 1px;
+  content: "▸"; color: var(--orange); font-weight: 900;
+  position: absolute; left: 0; top: 0;
 }
 ul.ticks li b { color: var(--brand-bright); }
 
