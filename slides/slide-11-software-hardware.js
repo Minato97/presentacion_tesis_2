@@ -19,7 +19,7 @@ DECK.register({
     </div>
 
     <div class="card teal" data-anim style="--i:1">
-      <h3 class="h3ic" style="color:var(--teal)">${icon('sensor')} Hardware — nodos IoT (ESP32)</h3>
+      <h3 class="h3ic" style="color:var(--teal)">${icon('sensor')} Hardware — nodos IoT (Raspberry Pi 5)</h3>
       <p style="margin-bottom:10px">16 variables en 4 dominios. Cada una con umbrales bajo / medio / alto.</p>
       <div class="chips">
         <span class="chip">${icon('wind')} Aire: DHT11 · BMP280 · PMS5003 · MH-Z16</span>

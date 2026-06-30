@@ -15,7 +15,7 @@ DECK.register({
     <div class="card brand" data-anim style="--i:3">
       <h3 class="h3ic">${icon('gear')} Funcionales (muestra)</h3>
       <ul class="ticks" style="gap:8px">
-        <li><b>RF-03</b> Recibir y almacenar muestras de los nodos.</li>
+        <li><b>RF-03</b> Recibir y almacenar la información enviada por los nodos.</li>
         <li><b>RF-08</b> Monitoreo en tiempo real con umbrales.</li>
         <li><b>RF-09/10</b> Estadísticas y comparativas entre nodos.</li>
         <li><b>RF-14</b> Consulta en lenguaje natural (LLM + MCP).</li>

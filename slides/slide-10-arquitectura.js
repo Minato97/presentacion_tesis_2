@@ -6,7 +6,7 @@ DECK.register({
   <h2 class="title">5 capas desacopladas</h2>
 
   <div class="layers mt" style="max-width:min(900px,84cqw)">
-    <div class="layer l1" data-anim style="--i:0"><span class="iconbox">${icon('sensor')}</span><div><h4>Adquisición — Hardware IoT</h4><p>Nodos (ESP32) con sensores de aire, clima y suelo · identificados por MAC.</p></div></div>
+    <div class="layer l1" data-anim style="--i:0"><span class="iconbox">${icon('sensor')}</span><div><h4>Adquisición — Hardware IoT</h4><p>Nodos (Raspberry Pi 5) con sensores de aire, clima y suelo · identificados por MAC.</p></div></div>
     <div class="flowarrow">▼ &nbsp; POST /api/guardarMuestras (JWT)</div>
     <div class="layer l2" data-anim style="--i:1"><span class="iconbox">${icon('gear')}</span><div><h4>API / Lógica de negocio — Laravel 10</h4><p>Autenticación JWT · ingesta · CRUD · estadísticas y comparativas.</p></div></div>
     <div class="flowarrow">▼</div>
