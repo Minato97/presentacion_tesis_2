@@ -126,12 +126,13 @@ function stat(s, x, y, w, num, label, color) {
 // =====================================================================
 (function () {
   const s = bgSlide(A("Fondo.jpg"));
-  s.addImage({ path: A("LogoUdG.png"), x: 4.85, y: 0.5, w: 1.5, h: 1.5, sizing: { type: "contain", w: 1.5, h: 1.5 } });
-  s.addShape("roundRect", { x: 6.7, y: 0.66, w: 3.05, h: 1.18, rectRadius: 0.12, fill: { color: "FFFFFF" } });
-  s.addText("SECIHTI", { x: 6.7, y: 0.76, w: 3.05, h: 0.5, align: "center", valign: "middle", color: "9D2449", bold: true, fontSize: 27, charSpacing: 2, fontFace: "Georgia" });
-  s.addText("SECRETARÍA DE CIENCIA, HUMANIDADES,\nTECNOLOGÍA E INNOVACIÓN", { x: 6.7, y: 1.26, w: 3.05, h: 0.5, align: "center", valign: "top", color: "B0883B", bold: true, fontSize: 7.5, charSpacing: 0.5, fontFace: "Georgia", lineSpacingMultiple: 1.0 });
+  // Escudos en esquinas superiores opuestas: UDG izquierda, SECIHTI derecha
+  s.addImage({ path: A("LogoUdG.png"), x: 0.4, y: 0.4, w: 1.55, h: 1.55, sizing: { type: "contain", w: 1.55, h: 1.55 } });
+  s.addShape("roundRect", { x: 9.73, y: 0.45, w: 3.05, h: 1.18, rectRadius: 0.12, fill: { color: "FFFFFF" } });
+  s.addText("SECIHTI", { x: 9.73, y: 0.55, w: 3.05, h: 0.5, align: "center", valign: "middle", color: "9D2449", bold: true, fontSize: 27, charSpacing: 2, fontFace: "Georgia" });
+  s.addText("SECRETARÍA DE CIENCIA, HUMANIDADES,\nTECNOLOGÍA E INNOVACIÓN", { x: 9.73, y: 1.05, w: 3.05, h: 0.5, align: "center", valign: "top", color: "B0883B", bold: true, fontSize: 7.5, charSpacing: 0.5, fontFace: "Georgia", lineSpacingMultiple: 1.0 });
   s.addText("Universidad de Guadalajara · Centro Universitario de los Valles", { x: 1, y: 2.25, w: 11.33, h: 0.4, align: "center", color: "E7ECE3", fontSize: 14, fontFace: FONT });
-  s.addText("Sistema de Monitoreo Medioambiental y Edafológico con integración de un agente inteligente para la interpretación de datos", { x: 1.4, y: 2.7, w: 10.53, h: 1.5, align: "center", color: "FFFFFF", bold: true, fontSize: 28, fontFace: FONT, lineSpacingMultiple: 1.02 });
+  s.addText("Sistema de Monitoreo Medioambiental y Edafológico con Integración de un Agente Inteligente para la Interpretación de Datos", { x: 1.4, y: 2.7, w: 10.53, h: 1.5, align: "center", color: "FFFFFF", bold: true, fontSize: 28, fontFace: FONT, lineSpacingMultiple: 1.02 });
   s.addText([{ text: "Maestría en Ingeniería de Software · " }, { text: "Avances de Tesis — 2.º semestre", options: { color: C.sage, bold: true } }], { x: 1, y: 4.35, w: 11.33, h: 0.4, align: "center", color: "FFFFFF", fontSize: 14, fontFace: FONT });
   // chips
   const chips = [

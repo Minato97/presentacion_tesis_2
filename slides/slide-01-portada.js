@@ -6,20 +6,21 @@ DECK.register({
   <div class="bgimg gate"></div>
   <div class="veil"></div>
 
-  <div class="center" style="gap:0">
-    <div class="row center" data-anim="zoom" style="--i:0;gap:40px;align-items:center">
-      <img class="udg-escudo" style="height:clamp(104px,14cqh,180px)" src="assets/LogoUdG.png" alt="Universidad de Guadalajara" />
-      <span class="logo-pill" style="padding:12px 26px" title="Secretaría de Ciencia, Humanidades, Tecnología e Innovación">
-        <img src="assets/secihti.svg" alt="SECIHTI" style="height:clamp(68px,9cqh,116px)" />
-      </span>
-    </div>
+  <!-- Escudos en esquinas superiores opuestas -->
+  <img class="udg-escudo" src="assets/LogoUdG.png" alt="Universidad de Guadalajara"
+    style="position:absolute;top:clamp(20px,3cqh,46px);left:clamp(24px,3cqw,60px);height:clamp(112px,15cqh,200px);z-index:5" />
+  <span class="logo-pill" title="Secretaría de Ciencia, Humanidades, Tecnología e Innovación"
+    style="position:absolute;top:clamp(20px,3cqh,46px);right:clamp(24px,3cqw,60px);padding:10px 22px;z-index:5">
+    <img src="assets/secihti.svg" alt="SECIHTI" style="height:clamp(64px,8cqh,112px)" />
+  </span>
 
+  <div class="center" style="gap:0">
     <p class="subtitle center" data-anim style="--i:1;color:#e7ece3;margin-top:12px">
       Universidad de Guadalajara · Centro Universitario de los Valles
     </p>
 
     <h1 class="title center" data-anim="zoom" style="--i:2;color:#fff;max-width:30ch;margin:8px auto 0;font-size:clamp(24px,3.3cqw,44px)">
-      Sistema de Monitoreo Medioambiental y Edafológico con integración de un agente inteligente para la interpretación de datos
+      Sistema de Monitoreo Medioambiental y Edafológico con Integración de un Agente Inteligente para la Interpretación de Datos
     </h1>
 
     <p class="subtitle center" data-anim style="--i:3;color:#fff;margin-top:12px">
