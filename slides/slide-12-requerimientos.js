@@ -3,11 +3,11 @@ DECK.register({
   section: 'Requerimientos',
   html: `
   <div class="kicker"><span class="num">07</span> Análisis de requerimientos</div>
-  <h2 class="title">14 funcionales · 9 no funcionales</h2>
+  <h2 class="title">27 funcionales · 16 no funcionales</h2>
 
   <div class="row mt" style="justify-content:center;gap:34px">
-    <div class="stat" data-anim="pop" style="--i:0"><div class="big" data-count="14">0</div><div class="lbl">Funcionales (RF)</div></div>
-    <div class="stat" data-anim="pop" style="--i:1"><div class="big" data-count="9">0</div><div class="lbl">No funcionales (RNF)</div></div>
+    <div class="stat" data-anim="pop" style="--i:0"><div class="big" data-count="27">0</div><div class="lbl">Funcionales (RF)</div></div>
+    <div class="stat" data-anim="pop" style="--i:1"><div class="big" data-count="16">0</div><div class="lbl">No funcionales (RNF)</div></div>
     <div class="stat" data-anim="pop" style="--i:2"><div class="big" data-count="7">0</div><div class="lbl">Módulos</div></div>
   </div>
 
