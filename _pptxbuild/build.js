@@ -486,7 +486,7 @@ function stat(s, x, y, w, num, label, color) {
   const s = contentSlide();
   kicker(s, "07", "Análisis de requerimientos");
   title(s, "27 funcionales · 16 no funcionales");
-  const stats = [[27, "Funcionales (RF)"], [16, "No funcionales (RNF)"], [7, "Módulos"]];
+  const stats = [[27, "Funcionales (RF)"], [16, "No funcionales (RNF)"], [5, "Módulos"]];
   stats.forEach((st, i) => stat(s, 2.2 + i * 3.1, 1.85, 2.6, st[0], st[1], C.accent));
   const cy = 3.3, ch = 2.9, cw = (W - 2 * MX - 0.3) / 2;
   // RF

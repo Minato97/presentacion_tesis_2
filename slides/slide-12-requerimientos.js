@@ -8,7 +8,7 @@ DECK.register({
   <div class="row mt" style="justify-content:center;gap:34px">
     <div class="stat" data-anim="pop" style="--i:0"><div class="big" data-count="27">0</div><div class="lbl">Funcionales (RF)</div></div>
     <div class="stat" data-anim="pop" style="--i:1"><div class="big" data-count="16">0</div><div class="lbl">No funcionales (RNF)</div></div>
-    <div class="stat" data-anim="pop" style="--i:2"><div class="big" data-count="7">0</div><div class="lbl">Módulos</div></div>
+    <div class="stat" data-anim="pop" style="--i:2"><div class="big" data-count="5">0</div><div class="lbl">Módulos</div></div>
   </div>
 
   <div class="grid cols-2 mt">
